@@ -3,10 +3,10 @@ let pool = null;
 try {
   pool  = mysql.createPool({
     connectionLimit : 10,
-    host            : 'database-1.cv6bthml2fis.eu-central-1.rds.amazonaws.com',
+    host            : 'iotdb.clvqj8yzjwl7.us-east-1.rds.amazonaws.com',
     user            : 'admin',
-    password        : 'aws55555',
-    database        : 'demo'
+    password        : 'admin123',
+    database        : 'iotkurssi'
 
   });
   

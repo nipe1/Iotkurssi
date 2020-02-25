@@ -1,10 +1,6 @@
 const express = require('express');
 const app = express();
 const port = 4000;
-const usersComponent = require('./components/users');
-const temperatureComponent = require('./components/temperature');
-const lightsComponent = require('./components/lights');
-const tokenComponent = require('./components/token');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const db = require('./db');
@@ -91,7 +87,7 @@ app.route('/sound')
 		});
 	})
     .post((req, res) => {
-		db.query('UPDATE lights SET sound = ? WHERE idSound = 1', [req.body.sound])
+		db.query('UPDATE sound SET sound = ? WHERE idsound = 1', [req.body.sound])
 		.then(results => {
 			//console.log(results);
 			res.sendStatus(201);
